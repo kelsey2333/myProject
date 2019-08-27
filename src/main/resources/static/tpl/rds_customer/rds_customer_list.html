@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head th:replace="common/tag::tag"/>
+<meta charset="utf-8">
+<body>
+<!-- 页面顶部¨ -->
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="panel panel-warning">
+                 <div class="panel-heading"  >
+                    <h3 class="panel-title" >
+                        查询条件
+                    </h3>
+                 </div>
+    <div class="panel-body">
+        <div class="container">
+            <div class="row clearfix">
+                    <form role="form" id="searchForm" name="searchForm" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">id</label>
+                            <div class="col-sm-5">
+                                <input name="id" placeholder="id" type="text" class="form-control" id="exampleInputEmail1" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">name</label>
+                            <div class="col-sm-5">
+                                <input name="name" placeholder="name"type="text" class="form-control" id="exampleInputPassword1" />
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="button" id="btn_query" class="btn btn-primary"
+                                    onclick="search()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> 查询</button>
+                            <button type="button" class="btn btn-default col-xs-offset-1"
+                                    onclick="resetForm()"> <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> 重置</button>
+                        </div>
+                    </form>
+
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <table id="rds_customer" class="table">
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="/tpl/rds_customer/rds_customer_list.js"></script>

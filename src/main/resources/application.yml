@@ -1,0 +1,10 @@
+salt : uiwueylm
+hashIterations : 2
+
+spring:
+  profiles:
+    active: dev
+#关闭模板检查
+  thymeleaf:
+    check-template: false
+    check-template-location: false

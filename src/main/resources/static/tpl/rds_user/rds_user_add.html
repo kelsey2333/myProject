@@ -1,0 +1,70 @@
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<form name="addForm" id="addForm" method="post" class="form-horizontal">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"
+			aria-hidden="true">&times;</button>
+		<h4 class="modal-title" id="myModalLabel">增加用户</h4>
+	</div>
+	<div class="modal-body row">
+
+		<div class="panel-body wrapper-sm">
+            <div class="form-group row">
+                <label class="col-sm-6 control-label text-right"><b
+                        class="form-text-black">用户名</b><b class="form-error">*</b>:</label>
+                <div class="col-sm-10">
+                    <input type="text" name="userId" th:value="${userId}"
+                           class="form-control m-b-xs" readonly>
+                </div>
+            </div>
+			<div class="form-group row">
+				<label class="col-sm-6 control-label text-right"><b
+					class="form-text-black">姓名</b><b class="form-error">*</b>:</label>
+				<div class="col-sm-10">
+					<input type="text" name="username" placeholder="请输入姓名"
+						class="form-control m-b-xs">
+				</div>
+			</div>
+            <div class="form-group row">
+                <label class="col-sm-6 control-label text-right"><b
+                        class="form-text-black">所属部门</b><b class="form-error">*</b>:</label>
+                <div class="col-sm-10">
+                    <select class="form-control m-b-xs" name="department">
+                        <option value="1">机组1</option>
+                        <option value="2">机组2</option>
+                    </select>
+                </div>
+            </div>
+			<div class="form-group row">
+				<label class="col-sm-6 control-label text-right"><b
+					class="form-text-black">职业</b><b class="form-error">*</b>:</label>
+				<div class="col-sm-10">
+					<input type="text" name="job" placeholder="请输入职业"
+						class="form-control m-b-xs">
+				</div>
+			</div>
+            <div class="form-group row">
+                <label class="col-sm-6 control-label text-right"><b
+                        class="form-text-black">是否启用</b><b class="form-error">*</b>:</label>
+                <div class="col-sm-10">
+                    <select class="form-control m-b-xs" name="isUse">
+                        <option value="1">启用</option>
+                        <option value="0">未启用</option>
+                    </select>
+                </div>
+            </div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<div class="col-sm-25 m-b text-center">
+			<button type="button" class="btn btn-primary" onclick="addRdsUser()">
+				<span class="glyphicon glyphicon-save" aria-hidden="true"></span>保存
+			</button>
+			<button class="btn btn-default" data-dismiss="modal">
+				<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>关闭
+			</button>
+		</div>
+	</div>
+</form>
+</html>
+<script type="text/javascript" src="/tpl/rds_user/rds_user_add.js"></script>
